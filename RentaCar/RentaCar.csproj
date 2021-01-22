@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3391508-DBEC-4607-BAC2-1F98874B34E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RentaCar</RootNamespace>
+    <AssemblyName>RentaCar</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Clientes.cs">
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Empleados.cs">
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Estados.cs">
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Inspeccion.cs">
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Marcas.cs">
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Modelos.cs">
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Renta_devolucion.cs">
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RentcarDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentcarDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RentcarDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RentcarDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentcarDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tipos_combustible.cs">
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tipo_vehiculos.cs">
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Vehiculos.cs">
+      <DependentUpon>RentcarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rentcar.cs" />
+    <Compile Include="Views\ClienteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ClienteView.Designer.cs">
+      <DependentUpon>ClienteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DevolucionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DevolucionView.Designer.cs">
+      <DependentUpon>DevolucionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmpleadoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmpleadoView.Designer.cs">
+      <DependentUpon>EmpleadoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\InspeccionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\InspeccionView.Designer.cs">
+      <DependentUpon>InspeccionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MarcasView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MarcasView.Designer.cs">
+      <DependentUpon>MarcasView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModelosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModelosView.Designer.cs">
+      <DependentUpon>ModelosView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RentaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RentaView.Designer.cs">
+      <DependentUpon>RentaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TipoCombustibleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TipoCombustibleView.Designer.cs">
+      <DependentUpon>TipoCombustibleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TipoVehiculoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TipoVehiculoView.Designer.cs">
+      <DependentUpon>TipoVehiculoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VehiculosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VehiculosView.Designer.cs">
+      <DependentUpon>VehiculosView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\ClienteView.resx">
+      <DependentUpon>ClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DevolucionView.resx">
+      <DependentUpon>DevolucionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmpleadoView.resx">
+      <DependentUpon>EmpleadoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\InspeccionView.resx">
+      <DependentUpon>InspeccionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MarcasView.resx">
+      <DependentUpon>MarcasView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModelosView.resx">
+      <DependentUpon>ModelosView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RentaView.resx">
+      <DependentUpon>RentaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TipoCombustibleView.resx">
+      <DependentUpon>TipoCombustibleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TipoVehiculoView.resx">
+      <DependentUpon>TipoVehiculoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VehiculosView.resx">
+      <DependentUpon>VehiculosView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\RentcarDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RentcarDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\RentcarDB.edmx.diagram">
+      <DependentUpon>RentcarDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\RentcarDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RentcarDB.edmx</DependentUpon>
+      <LastGenOutput>RentcarDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\RentcarDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RentcarDB.edmx</DependentUpon>
+      <LastGenOutput>RentcarDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
