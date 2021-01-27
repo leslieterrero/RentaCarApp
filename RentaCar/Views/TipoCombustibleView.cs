@@ -160,5 +160,10 @@ namespace RentaCar.Views
         {
             Clean();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

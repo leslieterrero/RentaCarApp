@@ -21,7 +21,7 @@ namespace RentaCar.Views
             gatClientes();
             gatEmpleados();
             gatMarcas();
-            gatModelos();
+            //gatModelos();
             
         }
 
@@ -109,23 +109,31 @@ namespace RentaCar.Views
             using (RentcarEntities db = new RentcarEntities())
             {
                 var mar = db.Marcas.Where(a => a.estado == "Activo").ToList();
-                foreach (var a in mar)
-                {
-                    cmbMa.Items.Add(a.descripcion);
-                }
+                //foreach (var a in mar)
+                //{
+                //    cmbMa.Items.Add(a.descripcion);
+                //}
+                cmbMa.DataSource = mar;
+                cmbMa.DisplayMember = "descripcion";
+                cmbMa.ValueMember = "id";
+                cmbMa.SelectedIndex = -1;
             }
         }
 
 
-        public void gatModelos()
+        public void gatModelos(int marcaId)
         {
             using (RentcarEntities db = new RentcarEntities())
             {
-                var mo = db.Modelos.Where(a => a.id_marca == cmbMa.SelectedIndex).ToList();
-                foreach (var a in mo)
-                {
-                    cmbMo.Items.Add(a.descripcion);
-                }
+                var mo = db.Modelos.Where(a => a.id_marca == marcaId).ToList();
+                //foreach (var a in mo)
+                //{
+                //    cmbMo.Items.Add(a.descripcion);
+                //}
+                cmbMo.DataSource = mo;
+                cmbMo.DisplayMember = "descripcion";
+                cmbMo.ValueMember = "id";
+                cmbMo.SelectedIndex = -1;
             }
         }
 
@@ -161,6 +169,42 @@ namespace RentaCar.Views
         private void comboBoxPersona_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbMa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbMa.SelectedIndex != -1)
+                {
+                    var marcaId = cmbMa.SelectedValue.ToString();
+                    gatModelos(Int32.Parse(marcaId));
+
+                }
+            }
+            catch (Exception error)
+            {
+            }
         }
     }
 }

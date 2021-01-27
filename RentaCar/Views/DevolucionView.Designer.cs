@@ -33,7 +33,6 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.dgvRenta = new System.Windows.Forms.DataGridView();
             this.dtpRenta = new System.Windows.Forms.DateTimePicker();
-            this.numDias = new System.Windows.Forms.NumericUpDown();
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,8 +48,8 @@
             this.dtpDevolucion = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDias)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +85,7 @@
             this.btnAceptar.TabIndex = 132;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // dgvRenta
             // 
@@ -107,15 +107,6 @@
             this.dtpRenta.Size = new System.Drawing.Size(268, 26);
             this.dtpRenta.TabIndex = 130;
             this.dtpRenta.ValueChanged += new System.EventHandler(this.dtpRenta_ValueChanged);
-            // 
-            // numDias
-            // 
-            this.numDias.Location = new System.Drawing.Point(695, 143);
-            this.numDias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.numDias.Name = "numDias";
-            this.numDias.Size = new System.Drawing.Size(66, 26);
-            this.numDias.TabIndex = 129;
-            this.numDias.ValueChanged += new System.EventHandler(this.numDias_ValueChanged);
             // 
             // txtMonto
             // 
@@ -285,12 +276,22 @@
             this.label7.Text = "DEVOLUCIÓN";
             this.label7.Click += new System.EventHandler(this.label7_Click_1);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(687, 145);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(138, 26);
+            this.textBox1.TabIndex = 144;
+            // 
             // DevolucionView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1085, 823);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtpDevolucion);
             this.Controls.Add(this.label8);
@@ -303,7 +304,6 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgvRenta);
             this.Controls.Add(this.dtpRenta);
-            this.Controls.Add(this.numDias);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label6);
@@ -316,7 +316,6 @@
             this.Text = "DevolucionView";
             this.Load += new System.EventHandler(this.DevolucionView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDias)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -330,7 +329,6 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.DataGridView dgvRenta;
         private System.Windows.Forms.DateTimePicker dtpRenta;
-        private System.Windows.Forms.NumericUpDown numDias;
         private System.Windows.Forms.TextBox txtMonto;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label6;
@@ -346,5 +344,6 @@
         private System.Windows.Forms.DateTimePicker dtpDevolucion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

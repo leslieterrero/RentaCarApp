@@ -13,6 +13,7 @@ namespace RentaCar.Views
 {
     public partial class InspeccionView : Form
     {
+        Inspeccion modeloEdit = new Inspeccion();
         public InspeccionView()
         {
             InitializeComponent();
@@ -156,7 +157,45 @@ namespace RentaCar.Views
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            Inspeccion modelo = new Inspeccion();
+            try
+            {
+                modelo.id_cliente = cmbC.SelectedIndex;
+                modelo.estado = cmbEstado.Text.ToString();
+                if (modeloEdit.id != 0)
+                {
+                    modeloEdit.estado = cmbEstado.Text.ToString();
+                }
+                else
+                {
 
+                    using (RentcarEntities DB = new RentcarEntities())
+                    {
+                        if (modeloEdit.id == 0)
+                        {
+                            DB.Inspeccion.Add(modelo);
+                            DB.SaveChanges();
+                        }
+                        else
+                        {
+                            DB.Entry(modeloEdit).State = System.Data.Entity.EntityState.Modified;
+                        }
+
+                        DB.SaveChanges();
+                        modeloEdit.id = 0;
+                    }
+
+
+                   // FillDataGrid();
+                  //  Clean();
+
+                    MessageBox.Show("La información ha sido guardada con éxito!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void cmbV_SelectedValueChanged(object sender, EventArgs e)
@@ -184,6 +223,66 @@ namespace RentaCar.Views
         }
 
         private void cmbV_ValueMemberChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbGomaRep_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbRalladura_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbGato_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -39,7 +39,33 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -56,6 +82,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetClientes.cs">
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetEmpleadoss.cs">
+      <DependentUpon>DataSetEmpleadoss.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetEmpleadoss.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEmpleadoss.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\Clientes.cs">
       <DependentUpon>RentcarDB.tt</DependentUpon>
     </Compile>
@@ -102,6 +144,7 @@
       <DependentUpon>RentcarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Rentcar.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Views\ClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +164,12 @@
       <DependentUpon>EmpleadoView.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\InicioView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\InicioView.Designer.cs">
+      <DependentUpon>InicioView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\InspeccionView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +194,18 @@
     <Compile Include="Views\RentaView.Designer.cs">
       <DependentUpon>RentaView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReporteClientes.Designer.cs">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReporteEmpleadosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReporteEmpleadosView.Designer.cs">
+      <DependentUpon>ReporteEmpleadosView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\TipoCombustibleView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +224,8 @@
     <Compile Include="Views\VehiculosView.Designer.cs">
       <DependentUpon>VehiculosView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportClientes.rdlc" />
+    <EmbeddedResource Include="ReportEmpleadoss.rdlc" />
     <EmbeddedResource Include="Views\ClienteView.resx">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +244,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\InicioView.resx">
+      <DependentUpon>InicioView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\InspeccionView.resx">
       <DependentUpon>InspeccionView.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +258,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RentaView.resx">
       <DependentUpon>RentaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReporteEmpleadosView.resx">
+      <DependentUpon>ReporteEmpleadosView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TipoCombustibleView.resx">
       <DependentUpon>TipoCombustibleView.cs</DependentUpon>
@@ -206,6 +278,28 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RentcarDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DataSetClientes.xsc">
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetClientes.xss">
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetEmpleadoss.xsc">
+      <DependentUpon>DataSetEmpleadoss.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetEmpleadoss.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEmpleadoss.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetEmpleadoss.xss">
+      <DependentUpon>DataSetEmpleadoss.xsd</DependentUpon>
+    </None>
     <None Include="Model\RentcarDB.edmx.diagram">
       <DependentUpon>RentcarDB.edmx</DependentUpon>
     </None>
@@ -226,7 +320,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Model\RentcarDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -237,6 +333,19 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RentcarDB.edmx</DependentUpon>
       <LastGenOutput>RentcarDB.cs</LastGenOutput>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

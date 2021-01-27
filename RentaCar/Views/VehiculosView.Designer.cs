@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -61,23 +60,17 @@
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(468, 43);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 39);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "Vehículos";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(620, 419);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.button3.Location = new System.Drawing.Point(597, 491);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 35);
@@ -87,7 +80,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(461, 419);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.IndianRed;
+            this.button2.Location = new System.Drawing.Point(452, 491);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 35);
@@ -97,7 +92,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(293, 419);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.Location = new System.Drawing.Point(309, 491);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 35);
@@ -110,92 +107,104 @@
             // 
             this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(767, 124);
+            this.cmbTipo.Location = new System.Drawing.Point(670, 163);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(180, 28);
+            this.cmbTipo.Size = new System.Drawing.Size(165, 28);
             this.cmbTipo.TabIndex = 43;
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
             // 
             // txtMotor
             // 
-            this.txtMotor.Location = new System.Drawing.Point(290, 252);
+            this.txtMotor.Location = new System.Drawing.Point(220, 290);
             this.txtMotor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMotor.Name = "txtMotor";
-            this.txtMotor.Size = new System.Drawing.Size(206, 26);
+            this.txtMotor.Size = new System.Drawing.Size(167, 26);
             this.txtMotor.TabIndex = 42;
             this.txtMotor.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // txtChasis
             // 
-            this.txtChasis.Location = new System.Drawing.Point(290, 189);
+            this.txtChasis.Location = new System.Drawing.Point(220, 227);
             this.txtChasis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtChasis.Name = "txtChasis";
-            this.txtChasis.Size = new System.Drawing.Size(206, 26);
+            this.txtChasis.Size = new System.Drawing.Size(167, 26);
             this.txtChasis.TabIndex = 41;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(290, 125);
+            this.txtDescripcion.Location = new System.Drawing.Point(220, 163);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(206, 26);
+            this.txtDescripcion.Size = new System.Drawing.Size(167, 26);
             this.txtDescripcion.TabIndex = 40;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(607, 124);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(592, 166);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 20);
+            this.label5.Size = new System.Drawing.Size(56, 25);
             this.label5.TabIndex = 37;
             this.label5.Text = "Tipo ";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(160, 257);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(97, 291);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.Size = new System.Drawing.Size(97, 25);
             this.label4.TabIndex = 36;
             this.label4.Text = "No. Motor";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 194);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(90, 227);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
+            this.label3.Size = new System.Drawing.Size(108, 25);
             this.label3.TabIndex = 35;
             this.label3.Text = "No. Chasis";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(160, 135);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(78, 166);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 34;
             this.label2.Text = "Descripción";
             // 
             // txtPlaca
             // 
-            this.txtPlaca.Location = new System.Drawing.Point(290, 309);
+            this.txtPlaca.Location = new System.Drawing.Point(220, 347);
             this.txtPlaca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(206, 26);
+            this.txtPlaca.Size = new System.Drawing.Size(167, 26);
             this.txtPlaca.TabIndex = 50;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(160, 314);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(106, 350);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 20);
+            this.label8.Size = new System.Drawing.Size(96, 25);
             this.label8.TabIndex = 49;
             this.label8.Text = "No. Placa";
             // 
@@ -203,66 +212,78 @@
             // 
             this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(767, 189);
+            this.cmbMarca.Location = new System.Drawing.Point(670, 228);
             this.cmbMarca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(180, 28);
+            this.cmbMarca.Size = new System.Drawing.Size(165, 28);
             this.cmbMarca.TabIndex = 52;
+            this.cmbMarca.SelectedIndexChanged += new System.EventHandler(this.cmbMarca_SelectedIndexChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(607, 189);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(582, 230);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 20);
+            this.label9.Size = new System.Drawing.Size(67, 25);
             this.label9.TabIndex = 51;
             this.label9.Text = "Marca";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // cmbModelo
             // 
             this.cmbModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModelo.FormattingEnabled = true;
-            this.cmbModelo.Location = new System.Drawing.Point(767, 249);
+            this.cmbModelo.Location = new System.Drawing.Point(670, 288);
             this.cmbModelo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbModelo.Name = "cmbModelo";
-            this.cmbModelo.Size = new System.Drawing.Size(180, 28);
+            this.cmbModelo.Size = new System.Drawing.Size(165, 28);
             this.cmbModelo.TabIndex = 54;
             this.cmbModelo.SelectedIndexChanged += new System.EventHandler(this.cmbModelo_SelectedIndexChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(607, 247);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(574, 295);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 20);
+            this.label10.Size = new System.Drawing.Size(77, 25);
             this.label10.TabIndex = 53;
             this.label10.Text = "Modelo";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // cmbCombustible
             // 
             this.cmbCombustible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCombustible.FormattingEnabled = true;
-            this.cmbCombustible.Location = new System.Drawing.Point(767, 322);
+            this.cmbCombustible.Location = new System.Drawing.Point(670, 369);
             this.cmbCombustible.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbCombustible.Name = "cmbCombustible";
-            this.cmbCombustible.Size = new System.Drawing.Size(180, 28);
+            this.cmbCombustible.Size = new System.Drawing.Size(165, 28);
             this.cmbCombustible.TabIndex = 56;
+            this.cmbCombustible.SelectedIndexChanged += new System.EventHandler(this.cmbCombustible_SelectedIndexChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(582, 325);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(464, 368);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(150, 20);
+            this.label11.Size = new System.Drawing.Size(187, 25);
             this.label11.TabIndex = 55;
             this.label11.Text = "Tipo de combustible";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // dgvVehiculos
             // 
             this.dgvVehiculos.AllowUserToDeleteRows = false;
+            this.dgvVehiculos.BackgroundColor = System.Drawing.Color.White;
             this.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehiculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -275,7 +296,7 @@
             this.no_motor,
             this.combustible,
             this.estado});
-            this.dgvVehiculos.Location = new System.Drawing.Point(290, 530);
+            this.dgvVehiculos.Location = new System.Drawing.Point(262, 578);
             this.dgvVehiculos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvVehiculos.Name = "dgvVehiculos";
             this.dgvVehiculos.ReadOnly = true;
@@ -368,10 +389,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(175, 368);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(125, 409);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.Size = new System.Drawing.Size(73, 25);
             this.label1.TabIndex = 58;
             this.label1.Text = "Estado";
             // 
@@ -379,17 +402,41 @@
             // 
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(290, 360);
+            this.cmbEstado.Location = new System.Drawing.Point(220, 406);
             this.cmbEstado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(180, 28);
+            this.cmbEstado.Size = new System.Drawing.Size(167, 28);
             this.cmbEstado.TabIndex = 59;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(-2, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1058, 109);
+            this.panel2.TabIndex = 150;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(378, 33);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(232, 47);
+            this.label6.TabIndex = 111;
+            this.label6.Text = "VEHICULOS";
             // 
             // VehiculosView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 855);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(997, 855);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvVehiculos);
@@ -401,7 +448,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -418,14 +464,14 @@
             this.Text = "VehiculosView";
             this.Load += new System.EventHandler(this.VehiculosView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -458,5 +504,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
     }
 }

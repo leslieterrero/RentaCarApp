@@ -14,7 +14,7 @@ namespace RentaCar
         /// </summary>
         [STAThread]
         static void Main()
-        {
+       {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new ClienteView());
@@ -24,9 +24,12 @@ namespace RentaCar
             //Application.Run(new EmpleadoView());
             // Application.Run(new TipoCombustibleView());
             Application.Run(new RentaView());
-             //Application.Run(new VehiculosView());
-           // Application.Run(new InspeccionView());
-
+            //Application.Run(new VehiculosView());
+            //Application.Run(new InspeccionView());
+            //Application.Run(new InicioView());
+            //Application.Run(new DevolucionView());
+         //  Application.Run(new ReporteEmpleadosView());
+            //Application.Run(new ReporteClientes());
 
         }
     }

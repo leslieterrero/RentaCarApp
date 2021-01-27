@@ -166,5 +166,10 @@ namespace RentaCar.Views
             txtDescripcion.Text = "";
             comboEstado.Text = null;
         }
+
+        private void dgvTipoVehiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
