@@ -165,5 +165,23 @@ namespace RentaCar.Views
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            MantenimientosView frm = new MantenimientosView();
+
+            frm.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            InicioView frm = new InicioView();
+
+            frm.Show();
+        }
     }
 }

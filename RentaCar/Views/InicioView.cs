@@ -19,27 +19,12 @@ namespace RentaCar.Views
 
         private void HideSubMenu()
         {
-            if(pnlMant.Visible == true)
-            {
-                pnlMant.Visible = false;
-            }
-            if (pnlServ.Visible == true)
-            {
-                pnlServ.Visible = false;
-            }
+            
         } 
 
         private void ShowSubMenu(Panel subMenu)
         {
-            if(subMenu.Visible == false)
-            {
-                HideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-            {
-                subMenu.Visible = false;
-            }
+           
         }
 
 
@@ -65,13 +50,16 @@ namespace RentaCar.Views
 
         private void button13_Click(object sender, EventArgs e)
         {
+            this.Hide();
 
+            ReportesView frm = new ReportesView();
+
+            frm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // code
-            HideSubMenu();
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -81,66 +69,75 @@ namespace RentaCar.Views
 
         private void button10_Click(object sender, EventArgs e)
         {
-            // code
-            HideSubMenu();
+            
         }
 
         private void btnMant_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlMant);
+            this.Hide();
+
+            MantenimientosView frm = new MantenimientosView();
+
+            frm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // code
-            HideSubMenu();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // code
-            HideSubMenu();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            // code
-            HideSubMenu();
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            // code
-            HideSubMenu();
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            // code
-            HideSubMenu();
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            // code
-            HideSubMenu();
+            
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            // code
-            HideSubMenu();
+           
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            // code
-            HideSubMenu();
+           
         }
 
         private void btnServ_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlServ);
+            this.Hide();
+
+            ServiciosView frm = new ServiciosView();
+
+            frm.Show();
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -98,6 +98,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetEmpleadoss.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetRentas.cs">
+      <DependentUpon>DataSetRentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetRentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRentas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\Clientes.cs">
       <DependentUpon>RentcarDB.tt</DependentUpon>
     </Compile>
@@ -176,6 +184,12 @@
     <Compile Include="Views\InspeccionView.Designer.cs">
       <DependentUpon>InspeccionView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\MantenimientosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MantenimientosView.Designer.cs">
+      <DependentUpon>MantenimientosView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MarcasView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +220,24 @@
     <Compile Include="Views\ReporteEmpleadosView.Designer.cs">
       <DependentUpon>ReporteEmpleadosView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ReporteRentaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReporteRentaView.Designer.cs">
+      <DependentUpon>ReporteRentaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReportesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReportesView.Designer.cs">
+      <DependentUpon>ReportesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ServiciosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ServiciosView.Designer.cs">
+      <DependentUpon>ServiciosView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\TipoCombustibleView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +258,7 @@
     </Compile>
     <EmbeddedResource Include="ReportClientes.rdlc" />
     <EmbeddedResource Include="ReportEmpleadoss.rdlc" />
+    <EmbeddedResource Include="ReportRentas.rdlc" />
     <EmbeddedResource Include="Views\ClienteView.resx">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +283,9 @@
     <EmbeddedResource Include="Views\InspeccionView.resx">
       <DependentUpon>InspeccionView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\MantenimientosView.resx">
+      <DependentUpon>MantenimientosView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MarcasView.resx">
       <DependentUpon>MarcasView.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +301,15 @@
     <EmbeddedResource Include="Views\ReporteEmpleadosView.resx">
       <DependentUpon>ReporteEmpleadosView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReporteRentaView.resx">
+      <DependentUpon>ReporteRentaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportesView.resx">
+      <DependentUpon>ReportesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ServiciosView.resx">
+      <DependentUpon>ServiciosView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\TipoCombustibleView.resx">
       <DependentUpon>TipoCombustibleView.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,10 +319,6 @@
     <EmbeddedResource Include="Views\VehiculosView.resx">
       <DependentUpon>VehiculosView.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\RentcarDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RentcarDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="DataSetClientes.xsc">
       <DependentUpon>DataSetClientes.xsd</DependentUpon>
     </None>
@@ -300,6 +341,21 @@
     <None Include="DataSetEmpleadoss.xss">
       <DependentUpon>DataSetEmpleadoss.xsd</DependentUpon>
     </None>
+    <None Include="DataSetRentas.xsc">
+      <DependentUpon>DataSetRentas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRentas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetRentas.xss">
+      <DependentUpon>DataSetRentas.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model\RentcarDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RentcarDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Model\RentcarDB.edmx.diagram">
       <DependentUpon>RentcarDB.edmx</DependentUpon>
     </None>

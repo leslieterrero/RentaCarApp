@@ -1,4 +1,5 @@
 ﻿using RentaCar.Model;
+using RentaCar.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,7 @@ namespace RentaCar
         {
             InitializeComponent();
             gatEstados();
+            
         }
 
 
@@ -69,16 +71,29 @@ namespace RentaCar
         {
             Clientes modelo = new Clientes();
             try {
+                var cedula = txtCedula.Text.Trim();
+                var respuesta = validaCedula(cedula);
+                if (respuesta == false) {
+                    MessageBox.Show("Cedula no válida");
+                    return;
+                }
                 modelo.nombre = txtNombre.Text.Trim();
-                modelo.cedula = txtCedula.Text.Trim();
+                modelo.cedula = cedula;
                 modelo.no_tarjeta_cr = txtNoCred.Text.Trim();
                 modelo.limite_credito = txtLimCred.Text.Trim();
                 modelo.tipo_persona = comboBoxPersona.Text.ToString();
                 modelo.estado = comboBoxEstado.Text.ToString();
                 if (modeloEdit.id != 0)
                 {
+                    var editcedula = txtCedula.Text.Trim();
+                    var response = validaCedula(editcedula);
+                    if (response == false)
+                    {
+                        MessageBox.Show("Cedula no valida");
+                        return;
+                    }
                     modeloEdit.nombre = txtNombre.Text.Trim();
-                    modeloEdit.cedula = txtCedula.Text.Trim();
+                    modeloEdit.cedula = editcedula;
                     modeloEdit.no_tarjeta_cr = txtNoCred.Text.Trim();
                     modeloEdit.limite_credito = txtLimCred.Text.Trim();
                     modeloEdit.tipo_persona = comboBoxPersona.Text.ToString();
@@ -87,26 +102,32 @@ namespace RentaCar
                 if (txtNombre.Text == "" )
                 {
                     MessageBox.Show("Por favor, digite el nombre");
+                    return;
                 }
                 if (txtCedula.Text == "")
                 {
                     MessageBox.Show("Por favor, digite la cédula");
+                    return;
                 }
                 if (txtNoCred.Text == "")
                 {
                     MessageBox.Show("Por favor, digite el número de tarjeta de crédito");
+                    return;
                 }
                 if (txtLimCred.Text == "")
                 {
                     MessageBox.Show("Por favor, digite el límite de crédito");
+                    return;
                 }
                 if (comboBoxEstado.Text == "")
                 {
                     MessageBox.Show("Por favor, seleccione un estado");
+                    return;
                 }
                 if (comboBoxPersona.Text == "")
                 {
                     MessageBox.Show("Por favor, seleccione un tipo de persona");
+                    return;
                 }
                 else
                 {
@@ -256,6 +277,50 @@ namespace RentaCar
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public static bool validaCedula(string pCedula)
+
+        {
+            int vnTotal = 0;
+            string vcCedula = pCedula.Replace("-", "");
+            int pLongCed = vcCedula.Trim().Length;
+            int[] digitoMult = new int[11] { 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1 };
+
+            if (pLongCed < 11 || pLongCed > 11)
+                return false;
+
+            for (int vDig = 1; vDig <= pLongCed; vDig++)
+            {
+                int vCalculo = Int32.Parse(vcCedula.Substring(vDig - 1, 1)) * digitoMult[vDig - 1];
+                if (vCalculo < 10)
+                    vnTotal += vCalculo;
+                else
+                    vnTotal += Int32.Parse(vCalculo.ToString().Substring(0, 1)) + Int32.Parse(vCalculo.ToString().Substring(1, 1));
+            }
+
+            if (vnTotal % 10 == 0)
+                return true;
+            else
+                return false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            MantenimientosView frm = new MantenimientosView();
+
+            frm.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            InicioView frm = new InicioView();
+
+            frm.Show();
         }
     }
 }

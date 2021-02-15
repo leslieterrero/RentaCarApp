@@ -53,10 +53,12 @@ namespace RentaCar.Views
                 if (txtdescripcion.Text == "")
                 {
                     MessageBox.Show("Por favor, especifique una descripción");
+                    return;
                 }
                 if (cmbEstado.Text == "")
                 {
                     MessageBox.Show("Por favor, introduzca un estado");
+                    return;
                 }
 
                 else
@@ -175,6 +177,24 @@ namespace RentaCar.Views
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            MantenimientosView frm = new MantenimientosView();
+
+            frm.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            InicioView frm = new InicioView();
+
+            frm.Show();
         }
     }
 }

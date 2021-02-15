@@ -17,19 +17,10 @@ namespace RentaCar
        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new ClienteView());
-            //Application.Run(new TipoVehiculoView());
-            //Application.Run(new ModelosView());
-            //Application.Run(new MarcasView());
-            //Application.Run(new EmpleadoView());
-            // Application.Run(new TipoCombustibleView());
-            Application.Run(new RentaView());
-            //Application.Run(new VehiculosView());
-            //Application.Run(new InspeccionView());
-            //Application.Run(new InicioView());
-            //Application.Run(new DevolucionView());
-         //  Application.Run(new ReporteEmpleadosView());
-            //Application.Run(new ReporteClientes());
+
+           
+            Application.Run(new InicioView());
+            
 
         }
     }

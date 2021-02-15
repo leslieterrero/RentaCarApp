@@ -17,7 +17,7 @@ namespace RentaCar.Model
         public int id { get; set; }
         public Nullable<int> id_vehiculo { get; set; }
         public Nullable<int> id_cliente { get; set; }
-        public Nullable<int> ralladuras { get; set; }
+        public string ralladuras { get; set; }
         public string cantidad_combustible { get; set; }
         public string goma_repuesto { get; set; }
         public string gato { get; set; }

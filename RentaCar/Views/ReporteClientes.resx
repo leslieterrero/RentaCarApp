@@ -132,4 +132,25 @@
   <metadata name="clientesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1006, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAQlJREFUSEvl
+        0TFOAmEQxfG1NNTGhpKGC9BZGO24h1fgAhYcg5I7UGI8AA0XILFAY0uEZH3D/vlCnFlZ+GgIv+Ql7Mz7
+        pqG4HmVZtpUpaTM+Dx18UD6UnaXyzDqPDr0oP3b1j40yUG6oHkcPb5WRcshYafGsGT3oKDN73dBc6fL8
+        fyr2lW97dSR70+dMTIUnZW3tE9l/9cg5T8v3bS3PG+c8LVdVJ8uKcx6FbJzz2GfjnMc+G+c89nUWyoTY
+        71qc89jXuaNmvftqFKPmsQ9RSRiHqHjsQ1QSxiEqHvsQlYRxiIrHPkQlYRyi4mn3VVWcTyqJZo27iZY9
+        5VUZ7sW+e1QSm7E72L1kRfEL2uxezG0+PmwAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAQpJREFUaEPt
+        mEsOAVEQRTtprJLdsAiMTbAOazCzBzFgop2iOun0L28gcZ/USW6EKskp3Y+UIgiCIAiCXKmqakK25EY2
+        9txL+iBbkh1pciRTb9EFSfvk92bcg71eeqseyI3J1yy8XQvEUuSNub9FB6RS5fVuIRMi7QPbx4FoHWKE
+        Qv4nIJS1/IyczE6MB1m5Zj80mPzFukW5u2oXiuryb1y3C7Xzp0Ub1+1C7flp0cZ1u1DL/grkcAaGD7FB
+        g/IQ9jW6dNVhaEr9EdNdYBCLISRA7C+GyHeZqUEsdQjNfdhALmUIvX24CYJjQ+jeQk1MkrQPtt5iMway
+        diXW5OqP+fytGARBEATBVyiKF+miHtuwRcrMAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

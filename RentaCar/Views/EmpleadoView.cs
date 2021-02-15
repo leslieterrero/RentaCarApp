@@ -1,4 +1,5 @@
 ﻿using RentaCar.Model;
+using RentaCar.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,8 +39,15 @@ namespace RentaCar
             Empleados modelo = new Empleados();
             try
             {
+                var cedula = txtCedula.Text.Trim();
+                var respuesta = validaCedula(cedula);
+                if (respuesta == false)
+                {
+                    MessageBox.Show("Cédula no válida");
+                    return;
+                }
                 modelo.nombre = txtNombre.Text.Trim();
-                modelo.cedula = txtCedula.Text.Trim();
+                modelo.cedula = cedula;
                 modelo.porciento_comision = txtComision.Text.Trim();
                 modelo.tanda_laboral = cmbTanda.Text.ToString();
                 modelo.estado = cmbEstado.Text.ToString();
@@ -57,23 +65,28 @@ namespace RentaCar
                 if (txtNombre.Text == "")
                 {
                     MessageBox.Show("Por favor, digite el nombre");
+                    return;
                 }
                 if (txtCedula.Text == "")
                 {
                     MessageBox.Show("Por favor, digite la cédula");
+                    return;
                 }
                 if (txtComision.Text == "")
                 {
                     MessageBox.Show("Por favor, digite la comisión");
-               
+                    return;
+
                 }
                 if (cmbEstado.Text == "")
                 {
                     MessageBox.Show("Por favor, seleccione un estado");
+                    return;
                 }
                 if (cmbTanda.Text == "")
                 {
                     MessageBox.Show("Por favor, seleccione una tanda");
+                    return;
                 }
                 else
                 {
@@ -218,6 +231,59 @@ namespace RentaCar
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            MantenimientosView frm = new MantenimientosView();
+
+            frm.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            InicioView frm = new InicioView();
+
+            frm.Show();
+        }
+
+        public static bool validaCedula(string pCedula)
+
+        {
+            int vnTotal = 0;
+            string vcCedula = pCedula.Replace("-", "");
+            int pLongCed = vcCedula.Trim().Length;
+            int[] digitoMult = new int[11] { 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1 };
+
+            if (pLongCed < 11 || pLongCed > 11)
+                return false;
+
+            for (int vDig = 1; vDig <= pLongCed; vDig++)
+            {
+                int vCalculo = Int32.Parse(vcCedula.Substring(vDig - 1, 1)) * digitoMult[vDig - 1];
+                if (vCalculo < 10)
+                    vnTotal += vCalculo;
+                else
+                    vnTotal += Int32.Parse(vCalculo.ToString().Substring(0, 1)) + Int32.Parse(vCalculo.ToString().Substring(1, 1));
+            }
+
+            if (vnTotal % 10 == 0)
+                return true;
+            else
+                return false;
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgvEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -83,10 +83,12 @@ namespace RentaCar.Views
                 if (txtdescripcion.Text == "")
                 {
                     MessageBox.Show("Por favor, especifique una descripción");
+                    return;
                 }
                 if (cmbEstado.Text == "")
                 {
                     MessageBox.Show("Por favor, introduzca un estado");
+                    return;
                 }
                 
                 else
@@ -105,13 +107,13 @@ namespace RentaCar.Views
 
                         DB.SaveChanges();
                     }
-                    if (modeloEdit.id != 0) {
-                        updateRow(modeloEdit.id);
-                        modeloEdit.id = 0;
-                    } else {
-                        addToTable(modelo.id);
-                    }
-                    //FillDataGrid();
+                    //if (modeloEdit.id != 0) {
+                    //    updateRow(modeloEdit.id);
+                    //} else {
+                    //    addToTable(modelo.id);
+                    //}
+                    modeloEdit.id = 0;
+                    FillDataGrid();
                     Clean();
 
                     MessageBox.Show("La información ha sido guardada con éxito!");
@@ -151,6 +153,9 @@ namespace RentaCar.Views
                 //if (tabla.Rows.Count > 0) {
                 //    tabla.Rows.Clear();
                 //}
+                tabla.Rows.Clear();
+                tabla.Refresh();
+                
                 if (tabla.Columns.Count <= 0) {
                     tabla.Columns.Add("id", "id");
                     tabla.Columns.Add("Marca", "Marca");
@@ -200,16 +205,18 @@ namespace RentaCar.Views
             {
                 using (RentcarEntities db = new RentcarEntities())
                 {
-                    var entry = db.Entry(modelo);
-                    if (entry.State == System.Data.Entity.EntityState.Detached)
-                    {
-                        db.Modelos.Attach(modelo);
-                        db.Modelos.Remove(modelo);
+                    //var entry = db.Entry(modelo);
+                    var find = db.Modelos.FirstOrDefault(a => a.id == modeloEdit.id);
+                   // if (entry.State == System.Data.Entity.EntityState.Detached)
+                   // {
+                        //db.Modelos.Attach(modelo);
+                        db.Modelos.Remove(find);
                         db.SaveChanges(); /* no funciona*/
                         FillDataGrid();
                         Clean();
+                        modeloEdit.id = 0;
                         MessageBox.Show("Se ha eliminado la información correctamente");
-                    }
+                  //  }
                 }
 
             }
@@ -255,6 +262,29 @@ namespace RentaCar.Views
         }
 
         private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            MantenimientosView frm = new MantenimientosView();
+
+            frm.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            InicioView frm = new InicioView();
+
+            frm.Show();
+        }
+
+        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

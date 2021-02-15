@@ -43,15 +43,15 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_vehiculo" Type="int" />
           <Property Name="id_cliente" Type="int" />
-          <Property Name="ralladuras" Type="int" />
-          <Property Name="cantidad_combustible" Type="nvarchar" MaxLength="50" />
-          <Property Name="goma_repuesto" Type="nvarchar" MaxLength="50" />
-          <Property Name="gato" Type="nvarchar" MaxLength="50" />
-          <Property Name="roturas_cristal" Type="nvarchar" MaxLength="50" />
-          <Property Name="goma_delantera_izquierda" Type="nvarchar" MaxLength="50" />
-          <Property Name="goma_delantera_derecha" Type="nvarchar" MaxLength="50" />
-          <Property Name="goma_trasera_izquierda" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="goma_trasera_derecha" Type="nvarchar" MaxLength="50" />
+          <Property Name="ralladuras" Type="nvarchar" MaxLength="20" />
+          <Property Name="cantidad_combustible" Type="nvarchar" MaxLength="20" />
+          <Property Name="goma_repuesto" Type="nvarchar" MaxLength="20" />
+          <Property Name="gato" Type="nvarchar" MaxLength="20" />
+          <Property Name="roturas_cristal" Type="nvarchar" MaxLength="20" />
+          <Property Name="goma_delantera_izquierda" Type="nvarchar" MaxLength="20" />
+          <Property Name="goma_delantera_derecha" Type="nvarchar" MaxLength="20" />
+          <Property Name="goma_trasera_izquierda" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="goma_trasera_derecha" Type="nvarchar" MaxLength="20" />
           <Property Name="fecha" Type="date" />
           <Property Name="id_empleado" Type="int" />
           <Property Name="estado" Type="nvarchar" MaxLength="50" />
@@ -354,15 +354,15 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_vehiculo" Type="Int32" />
           <Property Name="id_cliente" Type="Int32" />
-          <Property Name="ralladuras" Type="Int32" />
-          <Property Name="cantidad_combustible" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="goma_repuesto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="gato" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="roturas_cristal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="goma_delantera_izquierda" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="goma_delantera_derecha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="goma_trasera_izquierda" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="goma_trasera_derecha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ralladuras" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="cantidad_combustible" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="goma_repuesto" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="gato" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="roturas_cristal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="goma_delantera_izquierda" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="goma_delantera_derecha" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="goma_trasera_izquierda" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="goma_trasera_derecha" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="fecha" Type="DateTime" Precision="0" />
           <Property Name="id_empleado" Type="Int32" />
           <Property Name="estado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />

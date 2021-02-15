@@ -38,15 +38,15 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_vehiculo" Type="int" />
     <Property Name="id_cliente" Type="int" />
-    <Property Name="ralladuras" Type="int" />
-    <Property Name="cantidad_combustible" Type="nvarchar" MaxLength="50" />
-    <Property Name="goma_repuesto" Type="nvarchar" MaxLength="50" />
-    <Property Name="gato" Type="nvarchar" MaxLength="50" />
-    <Property Name="roturas_cristal" Type="nvarchar" MaxLength="50" />
-    <Property Name="goma_delantera_izquierda" Type="nvarchar" MaxLength="50" />
-    <Property Name="goma_delantera_derecha" Type="nvarchar" MaxLength="50" />
-    <Property Name="goma_trasera_izquierda" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="goma_trasera_derecha" Type="nvarchar" MaxLength="50" />
+    <Property Name="ralladuras" Type="nvarchar" MaxLength="20" />
+    <Property Name="cantidad_combustible" Type="nvarchar" MaxLength="20" />
+    <Property Name="goma_repuesto" Type="nvarchar" MaxLength="20" />
+    <Property Name="gato" Type="nvarchar" MaxLength="20" />
+    <Property Name="roturas_cristal" Type="nvarchar" MaxLength="20" />
+    <Property Name="goma_delantera_izquierda" Type="nvarchar" MaxLength="20" />
+    <Property Name="goma_delantera_derecha" Type="nvarchar" MaxLength="20" />
+    <Property Name="goma_trasera_izquierda" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="goma_trasera_derecha" Type="nvarchar" MaxLength="20" />
     <Property Name="fecha" Type="date" />
     <Property Name="id_empleado" Type="int" />
     <Property Name="estado" Type="nvarchar" MaxLength="50" />

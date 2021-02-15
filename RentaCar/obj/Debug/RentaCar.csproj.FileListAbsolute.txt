@@ -113,3 +113,7 @@ C:\Users\JFRANCISCO\Desktop\RentaCar\RentaCar\bin\Debug\ru\Microsoft.ReportViewe
 C:\Users\JFRANCISCO\Desktop\RentaCar\RentaCar\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\JFRANCISCO\Desktop\RentaCar\RentaCar\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\JFRANCISCO\Desktop\RentaCar\RentaCar\obj\Debug\RentaCar.Views.ReporteClientes.resources
+C:\Users\JFRANCISCO\Desktop\RentaCar\RentaCar\obj\Debug\RentaCar.Views.MantenimientosView.resources
+C:\Users\JFRANCISCO\Desktop\RentaCar\RentaCar\obj\Debug\RentaCar.Views.ServiciosView.resources
+C:\Users\JFRANCISCO\Desktop\RentaCar\RentaCar\obj\Debug\RentaCar.Views.ReportesView.resources
+C:\Users\JFRANCISCO\Desktop\RentaCar\RentaCar\obj\Debug\RentaCar.Views.ReporteRentaView.resources
